@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Stauber</title>
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+  </head>
+
+  <body class="background">
+    <!--------
+      NAVBAR
+    --------->
+    <div class="Navbar">
+      <a class="active" href="#Home">Home</a>
+      <a href="#About">About</a>
+      <a href="#Github">Github</a>
+      <a href="#Contact">Contact</a>
+    </div>
+
+    <br />
+    <br />
+
+    <!------------------
+      BACKGROUND VIDEO
+    ------------------->
+    <div id="Home">
+      <video autoplay muted loop id="Video">
+        <source src="./video/b&wflowLgcut.mp4" />
+      </video>
+    </div>
+    <!------------
+      VIDEO TEXT
+    ------------->
+    <div class="Video_Text">
+      <h1 class="white-text">Michael's Portfolio</h1>
+      <strong>
+        <p class="center">
+          <q
+            >Much of our lived experiances have become digital. <br />With such
+            a shift, how better to leave a mark on the world than programing?</q
+          >
+          <br />
+          <br />
+          <br />
+          Welcom to my Portfolio
+          <br />
+          <br />
+        </p>
+      </strong>
+    </div>
+    <!-------
+      ABOUT
+    -------->
+    <div class="Row" id="About">
+      <!-- LEFT COLUMN -->
+      <div class="Column_2">
+        <img src="./images/self.jpg" alt="Michael tanning hide" />
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="Column_1">
+        <h1>About</h1>
+        <p>
+          <br />
+          <br />
+          I've been Diving into the programming world for just under two years
+          now. At first self-directed, and now through
+          <a href="https://www.learncodinganywhere.com" target="_blank"
+            >The Tech Academy</a
+          >'s software developer bootcamp. I have experience in: Python, JS,
+          Node, Express, React, MongoDB, Django, Flask, HTML, CSS, and more?
+          <br />Certainly more!
+          <br />
+          <br />I'm looking to start as a junior full stack dev and would love
+          to be a part of your team! <a href="#Contact">Contact</a> me below!
+        </p>
+      </div>
+    </div>
+    <!--------
+      GITHUB
+    --------->
+    <div class="Row" id="Github">
+      <!-- LEFT COLUMN -->
+      <div class="Column_1">
+        <h1>GitHub</h1>
+        <p>
+          interested in viewing
+          <a href="https://github.com/Michaelstau">some of my work</a>
+          ?
+        </p>
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="Column_2">
+        <a href="https://github.com/Michaelstau"
+          ><img src="./images/GitHub.png" alt="GitHub logo"
+        /></a>
+      </div>
+    </div>
+    <!---------
+      CONTACT
+    ---------->
+    <div class="Row" id="Contact">
+      <!-- LEFT COLUMN -->
+      <div class="Column_2 Column_tall">
+        <!-- <img src=".........." alt=""> -->
+      </div>
+      <!-- RIGHT COLUMN -->
+      <div class="Column_1 Column_tall">
+        <h1>Contact</h1>
+        <form action="https://formspree.io/f/mwpevqab" method="POST">
+          <label>Name:</label>
+          <input type="text" placeholder="Your name" />
+          <label>Email:</label>
+          <input type="text" id="Email" name="Email" placeholder="Your Email" />
+          <label>Message:</label>
+          <input
+            type="text"
+            id="Message"
+            name="Message"
+            placeholder="Your message here"
+          />
+          <input type="submit" value="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
