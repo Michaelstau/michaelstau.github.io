@@ -208,7 +208,7 @@ img:hover {
 }
 
 .Column_tall {
-  padding-top: 3.5%;
+  padding-top: 2%;
   height: 450px;
 }
 
@@ -225,6 +225,7 @@ img:hover {
 input[type="text"] {
   width: 100%;
   padding: 12px;
+
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
@@ -232,6 +233,10 @@ input[type="text"] {
   margin-bottom: 16px;
   resize: vertical;
   font-family: Perpetua, Rockwell Extra Bold;
+}
+
+input[type="text"]:hover {
+  box-shadow: 0 0 5px #00004d inset;
 }
 
 input[type="submit"] {
