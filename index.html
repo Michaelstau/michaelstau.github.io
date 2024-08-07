@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Stauber</title>
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script src="./JS/main.js" defer></script>
   </head>
 
   <body class="background">
@@ -13,13 +14,12 @@
     --------->
     <div class="Navbar">
       <a class="active" href="#Home">Home</a>
+      <a href="#Slideshow">Slideshow</a>
       <a href="#About">About</a>
       <a href="#Github">Github</a>
-      <a href="#Contact">Contact</a>
+      <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
     </div>
 
-    <br />
-    <br />
 
     <!------------------
       BACKGROUND VIDEO
@@ -33,21 +33,46 @@
       VIDEO TEXT
     ------------->
     <div class="Video_Text">
-      <h1 class="white-text">Michael's Portfolio</h1>
+      <h1 class="white-text center">Michael's Portfolio</h1>
       <strong>
         <p class="center">
-          <q
-            >Much of our lived experiances have become digital. <br />With such
-            a shift, how better to leave a mark on the world than programing?</q
-          >
+          <q>Much of our lived experiances have become digital. <br />With such
+            a shift, how better to leave a mark on the world than programing?</q>
           <br />
           <br />
           <br />
-          Welcom to my Portfolio
+          Welcome to my Portfolio
           <br />
           <br />
         </p>
       </strong>
+    </div>
+
+    <div id="Slideshow">
+      <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+          <div class="slides fade">
+            <img class="Slideshow_Images" src="./images/onrocks.jpg" alt="Michael sitting on rocks">
+            <div class="text">Glad to see you made it here!</div>
+          </div>
+          <div class="slides fade">
+            <img class="Slideshow_Images" src="./images/HTML_CSS_and_JavaScript.jpeg" alt="Logos for HTML, CSS, and JS">
+            <div class="text">Experienced in HTML CSS and JS.</div>
+          </div>
+          <div class="slides fade">
+            <img class="Slideshow_Images" src="./images/mern-stack-logo.jpg" alt="Logo for MERN stack">
+            <div class="text">Capable working in the MERN Stack.</div>
+          </div>
+          <div class="slides fade">
+            <img class="Slideshow_Images" src="./images/Python.png" alt="Logo for Python">
+            <div class="text">Thrilled to work in Python territory.</div>
+          </div>
+          <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        <br>
+      </div>
     </div>
     <!-------
       ABOUT
@@ -55,24 +80,22 @@
     <div class="Row" id="About">
       <!-- LEFT COLUMN -->
       <div class="Column_2">
-        <img src="./images/self.jpg" alt="Michael tanning hide" />
+        <img src="./images/self(color).jpg" alt="A picture of Michael"/>
       </div>
       <!-- RIGHT COLUMN -->
       <div class="Column_1">
         <h1>About</h1>
         <p>
-          <br />
-          <br />
           I've been Diving into the programming world for just under two years
           now. At first self-directed, and now through
           <a href="https://www.learncodinganywhere.com" target="_blank"
             >The Tech Academy</a
           >'s software developer bootcamp. I have experience in: Python, JS,
-          Node, Express, React, MongoDB, Django, Flask, HTML, CSS, and more?
-          <br />Certainly more!
-          <br />
-          <br />I'm looking to start as a junior full stack dev and would love
-          to be a part of your team! <a href="#Contact">Contact</a> me below!
+          MongoDB Express, React, Node, Django, Flask, HTML, CSS, and more?
+          <br>
+          <br>
+          <p>Certainly more!</p>
+
         </p>
       </div>
     </div>
@@ -84,9 +107,15 @@
       <div class="Column_1">
         <h1>GitHub</h1>
         <p>
-          interested in viewing
-          <a href="https://github.com/Michaelstau">some of my work</a>
-          ?
+
+          I'm looking to start as a junior full stack dev and would love
+          to be a part of your team!
+          take a look at <a href="https://github.com/Michaelstau"> some of my work.</a>
+          <br>
+          <p class="centered">or</p>
+          <br>
+          <button onclick="openForm()" ondblclick="closeForm()">Get in touch.</button>
+
         </p>
       </div>
       <!-- RIGHT COLUMN -->
@@ -96,32 +125,38 @@
         /></a>
       </div>
     </div>
-    <!---------
-      CONTACT
-    ---------->
-    <div class="Row" id="Contact">
-      <!-- LEFT COLUMN -->
-      <div class="Column_2 Column_tall">
-        <!-- <img src=".........." alt=""> -->
-      </div>
-      <!-- RIGHT COLUMN -->
-      <div class="Column_1 Column_tall">
-        <h1>Contact</h1>
-        <form action="https://formspree.io/f/mwpevqab" method="POST">
-          <label>Name:</label>
-          <input type="text" placeholder="Your name" />
-          <label>Email:</label>
-          <input type="text" id="Email" name="Email" placeholder="Your Email" />
-          <label>Message:</label>
+
+
+
+    <!-------
+     CONTACT
+    -------->
+
+    <div id="Contact">
+      <button class="contact-button" onclick="openForm()">CONTACT</button>
+      <div class="form-popup" id="contactForm">
+        <form class="form-container" action="https://formspree.io/f/mwpevqab" method="POST">
+          <h1>Contact</h1>
+          <label for="name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Your name" required/>
+          <label for="phone">Phone:</label>
+          <input type="text" name="phone" id="phone" placeholder="Phone number"/>
+          <label for="email">Email:</label>
+          <input type="text" name="Email" id="email" placeholder="Your Email" required/>
+          <label for="message">Message:</label>
           <input
             type="text"
-            id="Message"
             name="Message"
-            placeholder="Your message here"
+            id="message"
+            placeholder="Type message here."
           />
-          <input type="submit" value="submit" />
+          <button type="submit" class="btn">SUBMIT</button>
+          <button type="button" class="btn close" onclick="closeForm()">CLOSE</button>
         </form>
       </div>
     </div>
   </body>
+  <footer>
+    <p class="center">Michael Stauber | 2024</p><br>
+  </footer>
 </html>
